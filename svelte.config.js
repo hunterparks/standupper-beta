@@ -7,7 +7,12 @@ const dev = process.argv.includes('dev');
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: null,
+			precompress: false
+		}),
 		paths: {
 			base: dev ? '' : process.env.BASE_PATH
 		}
