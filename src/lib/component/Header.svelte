@@ -1,15 +1,16 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import Toggle from '$lib/component/Toggle.svelte';
 	import Logo from './Logo.svelte';
 </script>
 
 <nav>
-	<a href="/" class="title">
+	<a href="{base}/" class="title">
 		<Logo />
 	</a>
 	<ul class="links">
-		<li><a href="/about">About</a></li>
-		<li><a href="/contact">Contact</a></li>
+		<li><a href="{base}/about">About</a></li>
+		<li><a href="{base}/contact">Contact</a></li>
 	</ul>
 	<Toggle />
 </nav>
