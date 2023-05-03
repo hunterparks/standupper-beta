@@ -15,6 +15,9 @@ const config = {
 		}),
 		paths: {
 			base: dev ? '' : process.env.BASE_PATH
+		},
+		files: {
+			lib: 'src/lib'
 		}
 	}
 };
